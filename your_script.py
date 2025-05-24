@@ -53,5 +53,8 @@ def view_paste(paste_id):
         abort(404)
     return render_template('view.html', content=content, paste_id=paste_id)
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
