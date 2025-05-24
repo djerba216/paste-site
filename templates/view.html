@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paste {{ paste_id }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body class="bg-gray-100 text-gray-900 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-2xl font-bold mb-4">Paste ID: {{ paste_id }}</h1>
+    <pre><code class="language-text">{{ content }}</code></pre>
+    <div class="mt-4">
+      <a href="/" class="text-blue-600 hover:underline">Create a new paste</a>
+    </div>
+  </div>
+</body>
+</html>
